@@ -6,6 +6,7 @@ export default function Thoughts() {
       <h1 className="text-2xl font-medium tracking-tight">Thoughts</h1>
 
       <p className="text-lg">My random thoughts.</p>
+      <hr className="border-t border-gray-300" />
 
       <div className="flex flex-col gap-10">
         {THOUGHTS.map((thought, index) => (

@@ -9,6 +9,8 @@ export default function Qoutes() {
         A catalog of all the quotes I found interesting over the internet
       </p>
 
+      <hr className="border-t border-gray-300" />
+
       <div className="flex flex-col gap-10">
         {QOUTES.map((qoute, index) => (
           <div key={index} className="space-y-2">

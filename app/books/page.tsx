@@ -6,6 +6,7 @@ export default function Books() {
       <h1 className="text-2xl font-extrabold">Books</h1>
 
       <p className="text-lg">A collection of all the books I have read</p>
+      <hr className="border-t border-gray-300" />
 
       <div className="grid grid-cols-2 gap-10">
         {BOOKS.map((book, index) => (

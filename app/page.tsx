@@ -2,7 +2,7 @@ import Blog from "./components/blog";
 import Experience from "./components/experience";
 import GithubHeatmap from "./components/github";
 import Hero from "./components/hero";
-import Navbar from "./components/navbar";
+
 import Personal from "./components/personal";
 import Techstack from "./components/techstack";
 
@@ -12,8 +12,12 @@ export default function Home() {
       <Hero />
       <Techstack />
       <GithubHeatmap />
-      <Experience />
-      <Blog />
+      <section id="work">
+        <Experience />
+      </section>
+      <section id="blog">
+        <Blog />
+      </section>
       <Personal />
     </div>
   );

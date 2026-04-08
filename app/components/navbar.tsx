@@ -6,17 +6,22 @@ import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   return (
-    <div className="bg-white flex items-baseline justify-between">
-      <div className="">
+    <div className="">
+      {/* <div className="">
         <Image src={x} alt="logo" className="h-12 w-12 rounded-2xl" />
-      </div>
+      </div> */}
 
-      <div className="flex items-center gap-4 text-xl text-gray-600">
-        <Link href={"/work"}>Work</Link>
-        <Link href={"/projects"}>Project</Link>
-        <Link href={"/blog"}>Blogs</Link>
-        <Link href={"/thoughts"}>Thoughs</Link>
-        <ThemeToggle />
+      <div className="flex items-center justify-between w-full">
+        <div className="flex justify-between items-center gap-4 text-md text-gray-400 py-4">
+          <Link href={"/work"}>Work</Link>
+          <Link href={"/projects"}>Project</Link>
+          <Link href={"/blog"}>Blogs</Link>
+          <Link href={"/resume"}>Resume</Link>
+        </div>
+        <div>
+          {" "}
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );
