@@ -14,8 +14,8 @@ export default function Navbar() {
       <div className="flex items-center gap-4 text-xl text-gray-600">
         <Link href={"/work"}>Work</Link>
         <Link href={"/projects"}>Project</Link>
-        <Link href={"/blogs"}>Blogs</Link>
-        <Link href={"/thoughs"}>Thoughs</Link>
+        <Link href={"/blog"}>Blogs</Link>
+        <Link href={"/thoughts"}>Thoughs</Link>
         <ThemeToggle />
       </div>
     </div>

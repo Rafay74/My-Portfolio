@@ -1,4 +1,4 @@
-import { Quotes } from "../utils/data";
+import { QOUTES } from "../utils/data";
 
 export default function Qoutes() {
   return (
@@ -10,7 +10,7 @@ export default function Qoutes() {
       </p>
 
       <div className="flex flex-col gap-10">
-        {Quotes.map((qoute, index) => (
+        {QOUTES.map((qoute, index) => (
           <div key={index} className="space-y-2">
             <div className="flex flex-col gap-2 rounded-xl border border-neutral-200 bg-gray-50 p-4 ">
               <p className="text-md leading-relaxed text-neutral-900 italic">

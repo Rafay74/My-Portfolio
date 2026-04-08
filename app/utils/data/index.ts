@@ -93,7 +93,7 @@ export const THOUGHTS = [
   },
 ];
 
-export const Quotes = [
+export const QOUTES = [
   {
     author: "Bobby Fischer",
     text: "I like the moment I crush a man's ego.",
@@ -105,5 +105,40 @@ export const Quotes = [
   {
     author: "Anonymous",
     text: "It's okay to look back at the past, just don't stare.",
+  },
+];
+
+export const BOOKS = [
+  {
+    author: "Jordan B Peterson",
+    book_name: "12 Rules For Life",
+  },
+  {
+    author: "Chris Guillebeau",
+    book_name: "100$ Startup",
+  },
+  {
+    author: "Eric Ries",
+    book_name: "The Lean Startup",
+  },
+  {
+    author: "George S Clason",
+    book_name: "The Richest Man In Babylon",
+  },
+  {
+    author: "Robert T Kiyosaki",
+    book_name: "Rich Dad Poor Dad",
+  },
+  {
+    author: "Yuval Noah Harari",
+    book_name: "Sapien - A Brief History of Humankind",
+  },
+  {
+    author: "Alex Xu",
+    book_name: "System Design Interview",
+  },
+  {
+    author: "Robert Greene",
+    book_name: "The 48 Laws of Power",
   },
 ];

@@ -4,6 +4,7 @@ import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./providers";
+import Navbar from "./components/navbar";
 
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className=" max-w-4xl mx-auto min-h-screen  py-2  flex flex-col">
+            <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

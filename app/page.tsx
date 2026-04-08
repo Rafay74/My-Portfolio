@@ -9,7 +9,6 @@ import Techstack from "./components/techstack";
 export default function Home() {
   return (
     <div className="flex flex-col gap-8">
-      <Navbar />
       <Hero />
       <Techstack />
       <GithubHeatmap />
