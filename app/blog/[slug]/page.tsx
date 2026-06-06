@@ -16,8 +16,9 @@ export default async function BlogPost({
   if (!post) notFound();
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h1 className="text-3xl font-bold">{post.name}</h1>
+    <div className="max-w-4xl mx-auto flex flex-col gap-8 px-4 py-10">
+      <h1 className="text-2xl font-medium tracking-tight">{post.name}</h1>
+
       <p className="mt-4 text-gray-600">{post.description}</p>
     </div>
   );

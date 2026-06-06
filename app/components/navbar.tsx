@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center gap-4 text-md text-gray-400 py-4">
           <Link href={"/work"}>Work</Link>
           <Link href={"/projects"}>Project</Link>
-          <Link href={"/blog"}>Blogs</Link>
+          <Link href={"/blogs"}>Blogs</Link>
           <Link href={"/resume"}>Resume</Link>
         </div>
         <div>

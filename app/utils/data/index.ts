@@ -110,6 +110,10 @@ export const QOUTES = [
 
 export const BOOKS = [
   {
+    author: "Josh Kaufman",
+    book_name: "The Personal MBA",
+  },
+  {
     author: "Jordan B Peterson",
     book_name: "12 Rules For Life",
   },
