@@ -60,13 +60,13 @@ export default function RootLayout({
         >
           <div className="flex justify-between h-screen ">
             {/* LEFT FIXED IMAGE */}
-            <div className="lg:w-64 xl:w-80 2xl:w-96 ml-20 mt-20 ">
+            {/* <div className="lg:w-64 xl:w-80 2xl:w-96 ml-20 mt-20 ">
               <Image
                 src={portfolio_image}
                 alt="logo"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
-            </div>
+            </div> */}
             {/* SCROLLABLE CENTER */}
             <div className="flex-1 overflow-y-auto ">
               <div className="mx-auto flex min-h-screen max-w-4xl flex-col py-2">

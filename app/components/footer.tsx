@@ -14,13 +14,15 @@ export default function Footer() {
         />
       </div>
 
-      <div className="flex flex-col items-center gap-1 py-6 text-center">
-        <p className="text-sm text-neutral-900 dark:text-neutral-100">
-          Made with 🖤 by Abdul Rafay
-        </p>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          © {new Date().getFullYear()} All rights reserved.
-        </p>
+      <div className="flex flex-col items-center gap-12 py-6 text-center">
+        <div>
+          <p className="text-md text-neutral-900 dark:text-neutral-100">
+            Made with 🖤 by Abdul Rafay
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            © {new Date().getFullYear()} All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

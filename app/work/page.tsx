@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function Work() {
-  return <div className="py-10">Work</div>;
+  redirect("/#work");
 }

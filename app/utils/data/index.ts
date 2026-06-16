@@ -37,19 +37,19 @@ export const EXPERIENCE = [
 ];
 export const BLOG_POSTS = [
   {
-    slug: "app-router-notes",
-    name: "Notes on the App Router",
+    slug: "n-plus-one-queries",
+    name: "N+1 Queries Are a Nightmare",
     description:
-      "Layouts, loading UI, and keeping boundaries clear between server and client.",
+      "One innocent loop. Fifty identical database calls. A breakdown of how N+1 happens, why ORMs hide it so well, and what actually fixes it.",
     date_posted: "Mar 12, 2026",
     content:
       "Full article text here. Can be markdown, HTML string, or MDX later.",
   },
   {
-    slug: "typescript-at-the-edges",
-    name: "TypeScript at the edges",
+    slug: "multi-tenant-vs-single-tenant",
+    name: "Multi-Tenant vs Single-Tenant — What's the Difference?",
     description:
-      "Why stricter types at API boundaries save more time than they cost.",
+      "Shared database or isolated stack? A guide to picking the right tenancy model before you over-engineer your saas.",
     date_posted: "Feb 3, 2026",
   },
   {
