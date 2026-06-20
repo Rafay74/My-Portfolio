@@ -4,7 +4,7 @@ import { PERSONAL } from "../utils/data";
 export default function Personal() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-2xl font-extrabold">Personal</h2>
+      <h2 className="text-2xl font-bold">Personal</h2>
 
       <div className="flex flex-col gap-3">
         {PERSONAL.map((item) => (

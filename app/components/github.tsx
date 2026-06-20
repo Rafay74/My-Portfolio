@@ -5,7 +5,7 @@ import { GitHubCalendar } from "react-github-calendar";
 export default function GithubHeatmap() {
   return (
     <>
-      <h2 className="text-2xl font-extrabold">Github contributions</h2>
+      <h2 className="text-2xl font-bold">Github contributions</h2>
 
       <GitHubCalendar
         username="Rafay74"

@@ -1,6 +1,218 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-hanken-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button,
+  input {
+    transition-property: color, background-color, border-color, opacity, box-shadow,
+      transform;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-scale-out {
+  animation: scale-out 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-toast-in {
+  animation: toast-in 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-toast-out {
+  animation: toast-out 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Code blocks — custom palette (no low-contrast blue) */
+.prose pre {
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  color: #27272a;
+}
+
+/* Plain fenced blocks (no language) + highlighted blocks base text */
+.prose pre code {
+  background: transparent;
+  color: inherit;
+}
+
+.prose .hljs-keyword,
+.prose .hljs-selector-tag,
+.prose .hljs-built_in {
+  color: #c2410c;
+}
+
+.prose .hljs-string,
+.prose .hljs-regexp,
+.prose .hljs-addition {
+  color: #15803d;
+}
+
+.prose .hljs-title,
+.prose .hljs-section,
+.prose .hljs-name,
+.prose .hljs-function .hljs-keyword {
+  color: #7c3aed;
+}
+
+.prose .hljs-number,
+.prose .hljs-literal,
+.prose .hljs-symbol {
+  color: #b45309;
+}
+
+.prose .hljs-comment,
+.prose .hljs-quote,
+.prose .hljs-meta {
+  color: #71717a;
+  font-style: italic;
+}
+
+.prose .hljs-variable,
+.prose .hljs-template-variable,
+.prose .hljs-attr,
+.prose .hljs-attribute {
+  color: #0f766e;
+}
+
+.prose .hljs-type,
+.prose .hljs-class .hljs-title {
+  color: #a21caf;
+}
+
+.dark .prose pre {
+  background-color: #18181b;
+  border-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.dark .prose pre code {
+  color: inherit;
+}
+
+.dark .prose .hljs-keyword,
+.dark .prose .hljs-selector-tag,
+.dark .prose .hljs-built_in {
+  color: #fb923c;
+}
+
+.dark .prose .hljs-string,
+.dark .prose .hljs-regexp,
+.dark .prose .hljs-addition {
+  color: #86efac;
+}
+
+.dark .prose .hljs-title,
+.dark .prose .hljs-section,
+.dark .prose .hljs-name,
+.dark .prose .hljs-function .hljs-keyword {
+  color: #c4b5fd;
+}
+
+.dark .prose .hljs-number,
+.dark .prose .hljs-literal,
+.dark .prose .hljs-symbol {
+  color: #fcd34d;
+}
+
+.dark .prose .hljs-comment,
+.dark .prose .hljs-quote,
+.dark .prose .hljs-meta {
+  color: #a1a1aa;
+}
+
+.dark .prose .hljs-variable,
+.dark .prose .hljs-template-variable,
+.dark .prose .hljs-attr,
+.dark .prose .hljs-attribute {
+  color: #5eead4;
+}
+
+.dark .prose .hljs-type,
+.dark .prose .hljs-class .hljs-title {
+  color: #f0abfc;
 }

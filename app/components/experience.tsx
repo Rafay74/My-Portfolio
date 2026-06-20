@@ -21,9 +21,7 @@ const STACK_ICONS: Record<string, string> = {
 export default function Experience() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-2xl font-extrabold dark:text-neutral-100">
-        Experience
-      </h2>
+      <h2 className="text-2xl font-bold dark:text-neutral-100">Experience</h2>
 
       <div className="flex flex-col gap-6">
         {EXPERIENCE.map((data, index) => (

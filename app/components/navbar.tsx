@@ -47,7 +47,7 @@ export default function Navbar() {
           <Image
             src={me}
             alt="Abdul Rafay"
-            className="h-20 w-20 rounded-full object-cover ring-1 ring-neutral-200 dark:ring-neutral-800"
+            className="h-14 w-14 rounded-full object-cover ring-1 ring-neutral-200 dark:ring-neutral-800"
           />
         </Link>
 
