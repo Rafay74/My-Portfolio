@@ -107,7 +107,7 @@ export default function BlogShare({
           <button
             type="button"
             onClick={() => hideToast()}
-            className={`fixed bottom-6 right-6 z-100 cursor-pointer rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-right text-sm text-neutral-700 shadow-2xl hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:border-neutral-700 dark:hover:bg-neutral-900 ${
+            className={`fixed bottom-4 left-4 right-4 z-100 cursor-pointer rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm text-neutral-700 shadow-2xl hover:border-neutral-300 hover:bg-neutral-50 sm:bottom-6 sm:left-auto sm:right-6 sm:max-w-sm sm:text-right dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:border-neutral-700 dark:hover:bg-neutral-900 ${
               toastVisible ? "animate-toast-in" : "animate-toast-out"
             }`}
           >

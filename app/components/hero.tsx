@@ -2,33 +2,33 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    //if u later add image change this value :  md:min-h-[30vh]
-    <div className="flex flex-col gap-6 py-4  min-h-[80vh] md:min-h-[30vh] ">
+    <div className="flex flex-col gap-5 py-4 sm:gap-6 md:min-h-[30vh]">
       <div>
-        <h1 className="text-4xl font-extrabold flex gap-2 items-center">
-          {"Hi! I am Abdul Rafay"}
-          <span className="text-2xl font-normal italic text-gray-500">
+        <h1 className="flex flex-col gap-1 text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl">
+          <span>Hi! I am Abdul Rafay</span>
+          <span className="text-lg font-normal italic text-gray-500 sm:text-xl md:text-2xl">
             — Software Engineer
           </span>
         </h1>
       </div>
+
       <div className="flex flex-col gap-4">
-        <p className="">
-          {/* Always wanted a little corner on the internet to share what I'm
-          learning or rant about whatever I'm building. */}
-          Welcome! This is my small corner on the internet where I'm going to
-          post or rant about technologies and stuff i am working on.
+        <p>
+          Welcome! This is my small corner on the internet where I&apos;m going
+          to post or rant about technologies and stuff I am working on.
         </p>
 
         <p>
           I build production-grade apps with React, Next, Node, Spring Boot &
-          PostgreSQL. Strong focus on stuff that scales and doesn't wake me up
-          at 3am. hehe.
+          PostgreSQL. Strong focus on stuff that scales and doesn&apos;t wake me
+          up at 3am. hehe.
         </p>
 
-        <p>When I am not coding, I'm either playing chess or reading books!</p>
+        <p>
+          When I am not coding, I&apos;m either playing chess or reading books!
+        </p>
 
-        <div className="flex gap-4 text-gray-500 text-xl [&>*]:hover:text-black transition">
+        <div className="flex gap-4 text-xl text-gray-500 transition [&>*]:hover:text-black dark:[&>*]:hover:text-white">
           <a
             href="https://linkedin.com/in/abd-rafay"
             target="_blank"

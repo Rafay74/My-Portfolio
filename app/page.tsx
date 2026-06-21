@@ -8,7 +8,7 @@ import Techstack from "./components/techstack";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-5 sm:gap-8">
       <Hero />
       <Techstack />
       <GithubHeatmap />

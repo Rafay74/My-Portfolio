@@ -18,13 +18,15 @@ export default async function BlogPost({
   if (!post) notFound();
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-col gap-6 px-4 py-10">
+    <div className="mx-auto flex max-w-4xl flex-col gap-5 px-0 py-8 sm:gap-6 sm:py-10">
       <header className="flex flex-col gap-3">
-        <h1 className="text-5xl font-bold tracking-tight">{post.name}</h1>
-        <p className="text-xl text-neutral-500 dark:text-neutral-400">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
+          {post.name}
+        </h1>
+        <p className="text-base text-neutral-500 sm:text-lg md:text-xl dark:text-neutral-400">
           {post.description}
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-neutral-500 dark:text-neutral-400">
             {post.date_posted}
           </p>

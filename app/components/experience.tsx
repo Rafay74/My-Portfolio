@@ -21,7 +21,9 @@ const STACK_ICONS: Record<string, string> = {
 export default function Experience() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-2xl font-bold dark:text-neutral-100">Experience</h2>
+      <h2 className="text-xl font-bold dark:text-neutral-100 sm:text-2xl">
+        Experience
+      </h2>
 
       <div className="flex flex-col gap-6">
         {EXPERIENCE.map((data, index) => (
@@ -39,7 +41,7 @@ export default function Experience() {
               </span>
             </div>
 
-            <div className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
+            <div className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-3 sm:p-4 dark:border-neutral-800 dark:bg-neutral-900">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs text-neutral-400 dark:text-neutral-500">{`</>`}</span>

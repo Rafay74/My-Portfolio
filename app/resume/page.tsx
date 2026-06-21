@@ -6,7 +6,7 @@ export default function Resume() {
       <h1 className="text-2xl font-extrabold">Resume</h1>
       <p className="text-lg">View or download my professional resume.</p>
       <hr className="border-t border-gray-300" />
-      <div className="w-full h-screen rounded-lg overflow-hidden shadow-md border">
+      <div className="h-[75vh] min-h-[420px] w-full overflow-hidden rounded-lg border shadow-md sm:h-screen">
         <iframe
           src={URL}
           title="My Professional Resume"

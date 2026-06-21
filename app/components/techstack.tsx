@@ -34,8 +34,8 @@ const STACK = [
 export default function Techstack() {
   return (
     <>
-      <h2 className="text-2xl font-bold">Techstack</h2>
-      <div className="flex flex-wrap gap-3">
+      <h2 className="text-xl font-bold sm:text-2xl">Techstack</h2>
+      <div className="flex flex-wrap gap-2 sm:gap-3">
         {STACK.map(({ src, alt }, index) => (
           <div
             key={index}

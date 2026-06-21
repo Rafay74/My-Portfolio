@@ -8,7 +8,7 @@ export default function Books() {
       <p className="text-lg">A collection of all the books I have read</p>
       <hr className="border-t border-gray-300" />
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10">
         {BOOKS.map((book, index) => (
           <div key={index} className="space-y-2">
             <div className="flex flex-col gap-2 rounded-xl border border-neutral-200 bg-gray-50 p-4 cursor-pointer">

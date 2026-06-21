@@ -4,7 +4,7 @@ import { BLOG_POSTS } from "../utils/data";
 export default function Blog() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+      <h2 className="text-xl font-bold text-neutral-900 sm:text-2xl dark:text-neutral-100">
         Blogs
       </h2>
 

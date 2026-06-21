@@ -41,17 +41,17 @@ function SectionLink({
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 -mx-4 border-b border-neutral-200/50 bg-white/75 px-4 backdrop-blur-md dark:border-neutral-800/50 dark:bg-neutral-950/75">
-      <div className="grid grid-cols-3 items-center py-3">
-        <Link href="/" className="justify-self-start">
+    <header className="sticky top-0 z-50 -mx-4 border-b border-neutral-200/50 bg-white/75 px-4 backdrop-blur-md sm:-mx-6 sm:px-6 dark:border-neutral-800/50 dark:bg-neutral-950/75">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-2 py-2.5 sm:gap-4 sm:py-3">
+        <Link href="/" className="shrink-0">
           <Image
             src={me}
             alt="Abdul Rafay"
-            className="h-14 w-14 rounded-full object-cover ring-1 ring-neutral-200 dark:ring-neutral-800"
+            className="h-9 w-9 rounded-full object-cover ring-1 ring-neutral-200 sm:h-11 sm:w-11 md:h-14 md:w-14 dark:ring-neutral-800"
           />
         </Link>
 
-        <div className="flex items-center justify-center gap-4 text-md text-gray-700">
+        <div className="flex items-center justify-center gap-2.5 text-sm text-gray-700 sm:gap-4 sm:text-base">
           <SectionLink href="/#work">Work</SectionLink>
           <SectionLink href="/#blog">Blog</SectionLink>
           <Link
@@ -63,7 +63,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="justify-self-end">
+        <div className="shrink-0 justify-self-end">
           <ThemeToggle />
         </div>
       </div>

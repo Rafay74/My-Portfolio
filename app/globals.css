@@ -112,6 +112,7 @@ html {
   background-color: #f4f4f5;
   border: 1px solid #e4e4e7;
   color: #27272a;
+  overflow-x: auto;
 }
 
 /* Plain fenced blocks (no language) + highlighted blocks base text */

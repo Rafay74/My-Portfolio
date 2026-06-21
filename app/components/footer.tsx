@@ -3,7 +3,7 @@ import cityImage from "../../public/city.svg";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 overflow-hidden">
+    <footer className="mt-10 overflow-hidden sm:mt-16">
       <div className="relative h-32 w-full ">
         <Image
           src={cityImage}
