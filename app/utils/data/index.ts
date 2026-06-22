@@ -187,10 +187,277 @@ The same query running 500 times rarely is.
   },
   {
     slug: "multi-tenant-vs-single-tenant",
-    name: "Multi-Tenant vs Single-Tenant — What's the Difference?",
+    name: "Multi-Tenant Architecture: One App, Thousands of Customers",
     description:
-      "Shared database or isolated stack? A guide to picking the right tenancy model before you over-engineer your saas.",
+      "Understanding how SaaS applications isolate customer data and when to choose multi-tenancy over single-tenancy.",
     date_posted: "Feb 3, 2026",
+    content: `
+  
+  Most SaaS applications serve thousands of customers.
+  
+  Yet they don't run thousands of separate applications.
+  
+  They run a single application.
+  
+  Slack does it.
+  
+  Notion does it.
+  
+  Salesforce does it.
+  
+  Even though millions of users are using the same product, their data remains completely isolated from one another.
+  
+  This is called **multi-tenant architecture**.
+  
+  ## The Problem
+  
+  Imagine you're building a CRM.
+  
+  Your first customer signs up.
+  
+  Everything is simple.
+  
+  You deploy:
+  
+  \`\`\`text
+  Application
+  Database
+  \`\`\`
+  
+  Then a second customer arrives.
+  
+  You could create an entirely separate deployment.
+  
+  \`\`\`text
+  Customer A
+   ├─ App
+   └─ Database
+  
+  Customer B
+   ├─ App
+   └─ Database
+  \`\`\`
+  
+  This is known as **single-tenancy**.
+  
+  Each customer gets their own application and database.
+  
+  The isolation is excellent.
+  
+  The operational overhead is not.
+  
+  This approach works.
+  
+  Until customer number 500 arrives.
+  
+  Now you're maintaining:
+  
+  - 500 applications
+  - 500 databases
+  - 500 deployments
+  - 500 monitoring pipelines
+  
+  At that point, the infrastructure becomes harder to manage than the actual product.
+  
+  ## The Alternative
+  
+  Instead of creating a new application for every customer, we can allow everyone to share the same system.
+  
+  \`\`\`text
+                Application
+                      │
+                      ▼
+                 Database
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+   Tenant A      Tenant B      Tenant C
+  \`\`\`
+  
+  All customers use the same application.
+  
+  The same servers.
+  
+  The same deployment.
+  
+  The same database.
+  
+  But they only see their own data.
+  
+  That's the core idea behind **multi-tenancy**.
+  
+  ## Wait...
+  
+  If everyone shares the same database, how is the data separated?
+  
+  The most common approach is to store a tenant identifier on every record.
+  
+  Consider a patients table.
+  
+  \`\`\`sql
+  id | tenant_id | patient_name
+  --------------------------------
+  1  | 101       | John
+  2  | 101       | Sarah
+  3  | 202       | Mike
+  4  | 202       | David
+  \`\`\`
+  
+  Whenever a user performs a query, the application automatically filters by tenant.
+  
+  \`\`\`sql
+  SELECT *
+  FROM patients
+  WHERE tenant_id = 101;
+  \`\`\`
+  
+  Tenant 101 sees only their records.
+  
+  Tenant 202 sees only theirs.
+  
+  Everyone uses the same table while remaining logically isolated.
+  
+  ## Different Ways to Implement Multi-Tenancy
+  
+  Not all systems separate tenants the same way.
+  
+  ### 1. Separate Database Per Tenant
+  
+  Each tenant gets their own database.
+  
+  \`\`\`text
+  Tenant A → Database A
+  Tenant B → Database B
+  Tenant C → Database C
+  \`\`\`
+  
+  Isolation is excellent.
+  
+  Operational complexity is not.
+  
+  Imagine running migrations across 5,000 databases.
+  
+  ### 2. Separate Schemas
+  
+  A single database contains multiple schemas.
+  
+  \`\`\`text
+  Database
+   ├─ tenant_a
+   ├─ tenant_b
+   └─ tenant_c
+  \`\`\`
+  
+  This provides stronger isolation while avoiding thousands of database instances.
+  
+  ### 3. Shared Database, Shared Schema
+  
+  This is what most SaaS products use.
+  
+  \`\`\`text
+  patients
+  appointments
+  users
+  \`\`\`
+  
+  Every table contains a tenant identifier.
+  
+  \`\`\`sql
+  tenant_id
+  \`\`\`
+  
+  It's cheaper, simpler, and scales extremely well.
+  
+  The trade-off is that tenant isolation becomes the application's responsibility.
+  
+  A missing tenant filter can expose data that should never be visible.
+  
+  ## Multi-Tenant vs Single-Tenant
+  
+  A simplified comparison:
+  
+  | Multi-Tenant | Single-Tenant |
+  |-------------|---------------|
+  | Lower infrastructure cost | Higher infrastructure cost |
+  | Easier deployments | More deployments to manage |
+  | Shared resources | Dedicated resources |
+  | Higher tenant density | Stronger isolation |
+  | More efficient scaling | Easier customization per customer |
+  
+  Neither approach is universally better.
+  
+  The right choice depends on the product you're building.
+  
+  ## Why SaaS Companies Prefer Multi-Tenancy
+  
+  The biggest reason is efficiency.
+  
+  Without multi-tenancy:
+  
+  \`\`\`text
+  1000 customers
+  =
+  1000 deployments
+  \`\`\`
+  
+  With multi-tenancy:
+  
+  \`\`\`text
+  1000 customers
+  =
+  1 deployment
+  \`\`\`
+  
+  New features are deployed once.
+  
+  Security patches are deployed once.
+  
+  Bug fixes are deployed once.
+  
+  The operational savings are enormous.
+  
+  ## The Catch
+  
+  Multi-tenancy introduces a problem commonly known as the **noisy neighbor effect**.
+  
+  Imagine Tenant A runs a poorly optimized report.
+  
+  \`\`\`sql
+  SELECT *
+  FROM appointments
+  WHERE ...
+  \`\`\`
+  
+  The query consumes excessive CPU and memory.
+  
+  Because the infrastructure is shared, Tenant B and Tenant C may also experience slower performance.
+  
+  One tenant can impact everyone else.
+  
+  Another issue is blast radius.
+  
+  In a single-tenant system, an outage affects one customer.
+  
+  In a multi-tenant system, an outage can affect every customer simultaneously.
+  
+  The efficiency comes with responsibility.
+  
+  ## Final Thoughts
+  
+  Multi-tenancy is one of the main reasons modern SaaS products can scale to thousands of customers without requiring thousands of deployments.
+  
+  The idea is surprisingly simple:
+  
+  - Share the infrastructure.
+  - Separate the data.
+  - Scale the platform.
+  
+  For most SaaS applications, multi-tenancy is the default choice.
+  
+  The challenge isn't building the application.
+  
+  The challenge is making sure Tenant A never realizes Tenant B exists.
+  `,
   },
   {
     slug: "css-that-scales",
