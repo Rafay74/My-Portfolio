@@ -459,13 +459,6 @@ The same query running 500 times rarely is.
   The challenge is making sure Tenant A never realizes Tenant B exists.
   `,
   },
-  {
-    slug: "css-that-scales",
-    name: "CSS that scales with the team",
-    description:
-      "Tokens, composition, and when to stop adding new utility classes.",
-    date_posted: "Jan 18, 2026",
-  },
 ];
 
 export const PERSONAL = [
