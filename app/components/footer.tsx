@@ -1,6 +1,8 @@
 import Image from "next/image";
 import cityImage from "../../public/city.svg";
 
+import VisitorCounter from "./visitor-counter";
+
 export default function Footer() {
   return (
     <footer className="mt-10 overflow-hidden sm:mt-16">
@@ -24,6 +26,8 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      <VisitorCounter />
     </footer>
   );
 }

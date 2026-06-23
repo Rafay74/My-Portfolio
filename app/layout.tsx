@@ -30,13 +30,15 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <GridBackground />
           <div className="relative z-10 flex h-full min-h-dvh md:h-dvh ">
-            <div className="flex-1 overflow-x-hidden overflow-y-auto">
+            <div
+              id="page-scroll"
+              className="flex-1 overflow-x-hidden overflow-y-auto"
+            >
               <div className="mx-auto flex min-h-dvh max-w-4xl flex-col px-4 pb-8 pt-2 sm:px-6 md:pb-2">
                 <Navbar />
 
