@@ -6,15 +6,15 @@ export default function NotFound() {
       <p className="text-sm font-medium uppercase tracking-widest text-neutral-400">
         404
       </p>
-      <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl dark:text-neutral-100">
+      <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
         Page not found
       </h1>
-      <p className="max-w-md text-neutral-500 dark:text-neutral-400">
+      <p className="max-w-md text-neutral-500">
         The page you are looking for does not exist or may have been moved.
       </p>
       <Link
         href="/"
-        className="mt-2 rounded-lg border border-neutral-200 px-4 py-2 text-sm font-medium transition hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-800 dark:hover:border-neutral-700 dark:hover:bg-neutral-900"
+        className="mt-2 rounded-lg border border-neutral-200 px-4 py-2 text-sm font-medium transition hover:border-neutral-300 hover:bg-neutral-50"
       >
         Back to home
       </Link>

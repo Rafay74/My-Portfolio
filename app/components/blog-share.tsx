@@ -96,7 +96,7 @@ export default function BlogShare({
       <button
         type="button"
         onClick={openModal}
-        className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-neutral-200 px-3 py-1.5 text-sm text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-700 dark:hover:bg-neutral-900"
+        className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-neutral-200 px-3 py-1.5 text-sm text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50"
       >
         <HiOutlineShare className="h-4 w-4" aria-hidden />
         Share
@@ -107,7 +107,7 @@ export default function BlogShare({
           <button
             type="button"
             onClick={() => hideToast()}
-            className={`fixed bottom-4 left-4 right-4 z-100 cursor-pointer rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm text-neutral-700 shadow-2xl hover:border-neutral-300 hover:bg-neutral-50 sm:bottom-6 sm:left-auto sm:right-6 sm:max-w-sm sm:text-right dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:border-neutral-700 dark:hover:bg-neutral-900 ${
+            className={`fixed bottom-4 left-4 right-4 z-100 cursor-pointer rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm text-neutral-700 shadow-2xl hover:border-neutral-300 hover:bg-neutral-50 sm:bottom-6 sm:left-auto sm:right-6 sm:max-w-sm sm:text-right ${
               toastVisible ? "animate-toast-in" : "animate-toast-out"
             }`}
           >
@@ -129,16 +129,16 @@ export default function BlogShare({
             />
 
             <div
-              className={`relative z-10 w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-6 shadow-2xl dark:border-neutral-800 dark:bg-neutral-950 ${
+              className={`relative z-10 w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-6 shadow-2xl ${
                 modalVisible ? "animate-scale-in" : "animate-scale-out"
               }`}
             >
               <div className="mb-5 flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                  <h2 className="text-lg font-semibold text-neutral-900">
                     Share this post
                   </h2>
-                  <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+                  <p className="mt-1 text-sm text-neutral-500">
                     {title}
                   </p>
                 </div>
@@ -147,14 +147,14 @@ export default function BlogShare({
                   type="button"
                   aria-label="Close"
                   onClick={closeModal}
-                  className="cursor-pointer rounded-full p-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-900 dark:hover:text-neutral-100"
+                  className="cursor-pointer rounded-full p-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900"
                 >
                   <HiXMark className="h-5 w-5" />
                 </button>
               </div>
 
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                <span className="text-sm font-medium text-neutral-700">
                   Copy link
                 </span>
 
@@ -162,7 +162,7 @@ export default function BlogShare({
                   <input
                     readOnly
                     value={shareUrl}
-                    className="min-w-0 flex-1 rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm text-neutral-700 outline-none dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200"
+                    className="min-w-0 flex-1 rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm text-neutral-700 outline-none"
                     onFocus={(event) => event.target.select()}
                   />
 
@@ -170,10 +170,10 @@ export default function BlogShare({
                     type="button"
                     onClick={copyLink}
                     aria-label={linkCopied ? "Link copied" : "Copy link"}
-                    className="inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 py-2.5 text-neutral-700 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:border-neutral-700 dark:hover:bg-neutral-800"
+                    className="inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 py-2.5 text-neutral-700 hover:border-neutral-300 hover:bg-neutral-50"
                   >
                     {linkCopied ? (
-                      <HiCheck className="h-5 w-5 text-green-600 dark:text-green-400" />
+                      <HiCheck className="h-5 w-5 text-green-600" />
                     ) : (
                       <HiOutlineClipboardDocument className="h-5 w-5" />
                     )}

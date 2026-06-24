@@ -28,7 +28,7 @@ export default function Hero() {
           When I am not coding, I&apos;m either playing chess or reading books!
         </p>
 
-        <div className="flex gap-4 text-xl text-gray-500 transition [&>*]:hover:text-black dark:[&>*]:hover:text-white">
+        <div className="flex gap-4 text-xl text-gray-500 transition [&>*]:hover:text-black">
           <a
             href="https://linkedin.com/in/abd-rafay"
             target="_blank"

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import cityImage from "../../public/city.svg";
 
-import VisitorCounter from "./visitor-counter";
-
 export default function Footer() {
   return (
     <footer className="mt-10 overflow-hidden sm:mt-16">
@@ -18,10 +16,10 @@ export default function Footer() {
 
       <div className="flex flex-col items-center gap-12 py-6 text-center">
         <div>
-          <p className="text-md text-neutral-900 dark:text-neutral-100">
+          <p className="text-md text-neutral-900">
             Made with 🖤 by Abdul Rafay
           </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="text-sm text-neutral-500">
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>

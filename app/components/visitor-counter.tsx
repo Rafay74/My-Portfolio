@@ -24,7 +24,7 @@ export default function VisitorCounter() {
   return (
     <p
       ref={ref}
-      className={`text-sm text-neutral-500 transition-opacity duration-300 dark:text-neutral-400 ${
+      className={`text-sm text-neutral-500 transition-opacity duration-300 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
