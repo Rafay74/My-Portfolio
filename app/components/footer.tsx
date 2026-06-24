@@ -1,5 +1,6 @@
 import Image from "next/image";
 import cityImage from "../../public/city.svg";
+import VisitorCounter from "./visitor-counter";
 
 export default function Footer() {
   return (
@@ -14,7 +15,9 @@ export default function Footer() {
         />
       </div>
 
-      <div className="flex flex-col items-center gap-12 py-6 text-center">
+      <div className="flex flex-col items-center gap-6 py-6 text-center">
+        <VisitorCounter />
+
         <div>
           <p className="text-md text-neutral-900">
             Made with 🖤 by Abdul Rafay
